@@ -36,6 +36,7 @@ Future<Object?> customSignInDialog(BuildContext context,
             borderRadius: BorderRadius.all(Radius.circular(40)),
           ),
           child: Scaffold(
+            resizeToAvoidBottomInset: false,
             backgroundColor: Colors.transparent,
             body: Stack(
               clipBehavior: Clip.none,
