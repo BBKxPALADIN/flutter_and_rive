@@ -48,15 +48,24 @@ class _EntryPointState extends State<EntryPoint> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Container(
-
+                        AnimatedContainer(
+                          duration: const Duration(microseconds: 200),
+                          width:
+                              bottomNavs[index] == selectedBottomNav ? 20 : 0,
+                          height: 4,
+                          margin: const EdgeInsets.only(bottom: 2),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: const Color(0xFF81B4FF),
+                          ),
                         ),
                         SizedBox(
                           height: 36,
                           width: 36,
                           child: Opacity(
-                            opacity:
-                                bottomNavs[index] == selectedBottomNav ? 1 : 0.5,
+                            opacity: bottomNavs[index] == selectedBottomNav
+                                ? 1
+                                : 0.5,
                             child: RiveAnimation.asset(
                               bottomNavs.first.src,
                               // "assets/RiveAssets/icons.riv ",
